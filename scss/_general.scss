@@ -1,13 +1,51 @@
 $kurale: "Kurale", serif;
 $os: "Open Sans", sans-serif;
+$color:#000;
+$yellow: #E8C300;
+$white: #fff;
+$white-opacity: rgba(255,255,255,0.5);
+$text:18px;
+$wrap: 1470px;
+$container: 1200px;
+$mc: 0 auto;
 
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
+
+@mixin flex($jc, $ai) {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: $jc;
+  align-items: $ai;
+}
+@mixin line {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 5px;
+  background: $yellow;
+  border-radius: 50px;
+  margin: $mc;
+  margin-top: 10px;
+  margin-bottom: 35px;
+  
+}
+body {
+  background: $white;
+  font-family: $os;
+  color: $color;
+  font-size: $text;
 }
 
-body {
-  background: #000;
-  font-family: $os;
+.wrapper {
+  max-width: $wrap;
+  margin: $mc;
+  padding: 0 15px;
+}
+
+.container {
+  max-width: $container;
+  margin: $mc;
+}
+svg {
+  width: 100%;
+  height: 100%;
 }
