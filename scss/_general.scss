@@ -5,8 +5,8 @@ $yellow: #E8C300;
 $white: #fff;
 $white-opacity: rgba(255,255,255,0.5);
 $text:18px;
-$wrap: 1470px;
-$container: 1200px;
+$wrap: 1440px;
+$container: 1230px;
 $mc: 0 auto;
 
 
@@ -38,10 +38,10 @@ body {
 .wrapper {
   max-width: $wrap;
   margin: $mc;
-  padding: 0 15px;
 }
 
 .container {
+  padding: 0 15px;
   max-width: $container;
   margin: $mc;
 }
