@@ -4,6 +4,7 @@ $color:#000;
 $yellow: #E8C300;
 $white: #fff;
 $white-opacity: rgba(255,255,255,0.5);
+$black-opacity: rgba(0,0,0,0.5);
 $text:18px;
 $wrap: 1440px;
 $container: 1230px;
@@ -25,7 +26,13 @@ $mc: 0 auto;
   border-radius: 50px;
   margin: $mc;
   margin-top: 10px;
-  margin-bottom: 35px;
+  margin-bottom: 35px; 
+}
+@mixin img {
+  width: 100%;
+  height: auto;
+  filter: drop-shadow(0px 0px 100px $black-opacity);
+  border-radius: 5px;
   
 }
 body {
@@ -33,6 +40,21 @@ body {
   font-family: $os;
   color: $color;
   font-size: $text;
+}
+section h2 {
+  font-family: $kurale;
+  font-size: 42px;
+  font-weight: 400;
+  &::after {
+    @include line;
+  }
+}
+section p {
+    line-height: 175%;
+    margin-bottom: 25px;
+  }
+.intro {
+  font-weight: bold;
 }
 
 .wrapper {
@@ -48,4 +70,13 @@ body {
 svg {
   width: 100%;
   height: 100%;
+}
+.circle {
+  width: 250px;
+  height: 250px;
+  border: 20px solid $yellow;
+  filter: drop-shadow(0px 0px 100px $black-opacity);
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
 }
